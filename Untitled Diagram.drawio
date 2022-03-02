@@ -1,11 +1,61 @@
-<mxfile host="app.diagrams.net" modified="2022-03-02T13:12:39.775Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="uT84faMiXOSR7zSWxsyD" version="16.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-02T13:26:03.091Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="duPCA9tlIiLTxM-_Q8cd" version="16.6.4" type="github">
   <diagram id="Ejx_ed3zZK2oqJMhxrnf" name="Page-1">
     <mxGraphModel dx="1038" dy="588" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="IBl3KorA1oaPF-Zx6owo-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="160" y="410" width="80" height="80" as="geometry" />
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-2" target="IBl3KorA1oaPF-Zx6owo-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-2" value="&lt;b&gt;当有另一个线程来竞争&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="410" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-3" value="撤销偏向锁的流程" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-5" target="IBl3KorA1oaPF-Zx6owo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-5" value="&lt;b&gt;等待进入全局安全点&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="490" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-6" target="IBl3KorA1oaPF-Zx6owo-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-6" value="&lt;b&gt;暂停原来持有偏向锁的线程&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="570" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-17" value="&lt;font color=&quot;#66ff66&quot;&gt;是&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#FFB570;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-11" target="IBl3KorA1oaPF-Zx6owo-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-19" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FFB570;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-11" target="IBl3KorA1oaPF-Zx6owo-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-11" value="&lt;b&gt;持有偏向锁的线程是否正处于同步块&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="241.25" y="655" width="247.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-13" target="IBl3KorA1oaPF-Zx6owo-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-13" value="触发锁升级竞争的线程开始在外cas自旋(轻量级锁)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="IBl3KorA1oaPF-Zx6owo-18" target="IBl3KorA1oaPF-Zx6owo-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-18" value="&lt;font color=&quot;#000000&quot;&gt;将远来持有偏向锁的线程设置为无锁状态,重新进行偏向锁的竞争&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FFB570;" vertex="1" parent="1">
+          <mxGeometry x="60" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IBl3KorA1oaPF-Zx6owo-20" value="唤醒原来持有偏向锁的线程" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="305" y="740" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
